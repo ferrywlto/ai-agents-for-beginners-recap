@@ -1,126 +1,107 @@
-# 🤖 Building Trustworthy AI Agents – A Simple Guide
-
-## 📌 Introduction
-AI agents are smart programs that can **think, learn, and act** on their own. But how do we make sure they are **safe, secure, and trustworthy**?  
-
-This guide will explain:
-- How to **build and deploy** AI agents responsibly.
-- The **security risks** AI agents face and how to prevent them.
-- How to **protect user privacy** while developing AI agents.
+# 🛡️ Building Trustworthy AI Agents Explained Simply
 
 ---
 
-## 🎯 Learning Goals
-After reading this, you will learn:
-✅ How to **identify risks** when creating AI agents.  
-✅ Ways to **secure AI agents** from attacks.  
-✅ How to **protect user data** and create a **better user experience**.  
+## 📌 **Introduction to Trustworthy AI Agents**
+
+Building **Trustworthy AI Agents** means creating AI systems that are safe, secure, and protect user privacy.
 
 ---
 
-## 🦺 Safety – Making AI Agents Reliable
-An AI agent should always work as expected.  
-To ensure this, developers follow a **System Message Framework** to **train AI agents** with clear instructions.
+## 🎯 **Importance of Trustworthy AI Agents**
 
-### 🔹 What is a System Message?
-A **system message** is a **set of rules and instructions** that tell the AI **what to do** and **how to respond**.  
-For example, an AI **travel assistant** might have a system message like this:
-
-```plaintext
-You are a travel assistant for Contoso Travel.
-Your job is to help customers book flights.
-You can search flights, book tickets, and send travel alerts.
-```
-
-This **ensures** the AI agent **stays on track** and does not go off-topic.
+| Importance | Explanation | Example |
+|---|---|---|
+| ✅ **Safety** | Ensuring agents perform as intended without causing harm | Booking flights accurately without errors |
+| 🔐 **Security** | Protecting AI systems and data from unauthorized access | Preventing hackers from manipulating flight bookings |
+| 🕵️ **Privacy** | Keeping user data confidential and secure | Ensuring personal details aren't leaked |
 
 ---
 
-## 🔐 Understanding AI Threats
-AI agents face **various attacks** that can make them unsafe.  
-Here are some **common threats** and how to **stop them**:
+## 🧱 **Steps to Create Trustworthy AI Agents**
 
+### 📝 **System Message Framework**
+
+This helps AI agents clearly understand their roles through structured instructions.
+
+#### 📌 **Framework Steps:**
+
+| Step | Explanation | Example |
+|------|-------------|---------|
+| 1️⃣ **Create Meta System Message** | General template used to create specific agent prompts | "You are an expert at creating AI assistants..." |
+| 2️⃣ **Basic Agent Prompt** | Clearly defines agent's role and tasks | "You are a travel agent who books flights..." |
+| 3️⃣ **Optimize Prompt via LLM** | Improve basic prompt with more details for clarity | Clearly outline responsibilities, objectives, and style |
+| 4️⃣ **Iterate and Improve** | Continuously refine system prompts based on feedback | Adjust messages based on user interactions |
+
+### 📌 **Visual Framework Example:**
 ```mermaid
-graph TD
-  A[AI Agent] -->|Tricked by bad input| B[Task Manipulation]
-  A -->|Access to sensitive data| C[Data Breach]
-  A -->|Too many requests| D[System Overload]
-  A -->|Wrong information injected| E[Fake Knowledge Attack]
-  A -->|Chain reaction of failures| F[Cascading Errors]
+graph TD;
+MetaPrompt[🗒️ Meta System Message] --> BasicPrompt[✏️ Basic Agent Prompt];
+BasicPrompt --> LLM[🤖 LLM Optimization];
+LLM --> OptimizedPrompt[📑 Optimized System Prompt];
+OptimizedPrompt --> Iterate[🔄 Iteration & Improvement];
+Iterate --> BasicPrompt;
 ```
-
-| 🚨 **Threat** | 🛡 **Prevention** |
-|-------------|----------------|
-| **Task Manipulation** (Tricking AI into wrong actions) | Add input validation and set clear task limits. |
-| **Data Breach** (Hacking AI to access private info) | Restrict access and use secure communication. |
-| **System Overload** (Too many requests crash the system) | Limit AI requests and set usage policies. |
-| **Fake Knowledge Attack** (Feeding AI false info) | Regularly check and verify AI knowledge sources. |
-| **Cascading Errors** (One failure causes many failures) | Use backup plans and safety checks. |
 
 ---
 
-## 👥 **Human-in-the-Loop – Keeping AI Accountable**
-Instead of letting AI agents **run without supervision**, we can use a **Human-in-the-Loop** system.  
-This means that **humans can review, approve, or reject AI actions**.
+## 🚨 **Understanding Security Threats**
 
+Security threats that AI agents face and ways to mitigate them:
+
+| Threat Type | Description | Mitigation |
+|---|---|---|
+| 📍 **Task & Instruction Manipulation** | Attackers try to alter agent instructions | Validate inputs, limit interactions |
+| 🔑 **Access to Critical Systems** | Unauthorized access to sensitive data through agents | Implement strict access control |
+| 📛 **Resource & Service Overloading** | Agents used to overwhelm services | Limit requests per agent |
+| 🗂️ **Knowledge Base Poisoning** | Corruption of data that agents rely on | Regular data checks and secure access |
+| ⚠️ **Cascading Errors** | Errors in one part spreading across systems | Isolate agents, implement error handling |
+
+### 📌 **Threat Mitigation Flow:**
 ```mermaid
-flowchart TD
-  A[User Request] --> B[AI Agent]
-  B -->|AI Generates Answer| C[Human Review]
-  C -->|Approve| D[Final Response]
-  C -->|Reject| E[Ask AI to Try Again]
+graph TD;
+UserInput[🗣️ User Input] --> Validation[✅ Input Validation];
+Validation --> AgentTask[🤖 Agent Task];
+AgentTask --> CriticalSystems[🔐 Secure Access to Systems];
+AgentTask --> Resources[📌 Limit Resource Use];
+AgentTask --> KnowledgeBase[📚 Validate Knowledge Base];
+AgentTask --> ErrorHandling[⚙️ Error Handling];
 ```
 
-✅ This approach ensures **accuracy** and prevents **bad decisions**.
-
 ---
 
-## 🛠 **Example: AI-Assisted Poem Writing**
-Here is a **Python script** that shows how a **Human-in-the-Loop system** works:
+## 🙋 **Human-in-the-Loop Approach**
 
-```python
-# Import AI model
-model_client = OpenAIChatCompletionClient(model="gpt-4o-mini")
+Users actively participate to oversee and guide AI agents. This keeps agents aligned with human expectations.
 
-# Create AI assistant
-assistant = AssistantAgent("assistant", model_client=model_client)
+| Benefit | Explanation | Example |
+|---|---|---|
+| 🗨️ **Real-time Feedback** | Humans give immediate feedback | User approves or revises a flight booking |
+| 🔄 **Iterative Improvement** | Continuous refinement of agent outputs | Adjustments based on user corrections |
 
-# Human user input
-user_proxy = UserProxyAgent("user_proxy", input_func=input)
-
-# Set termination condition (User says "APPROVE" to finish)
-termination = TextMentionTermination("APPROVE")
-
-# AI + Human teamwork
-team = RoundRobinGroupChat([assistant, user_proxy], termination_condition=termination)
-
-# Run the system
-stream = team.run_stream(task="Write a 4-line poem about the ocean.")
-await Console(stream)
+### 📌 **Human-in-the-Loop Example:**
+```mermaid
+graph LR;
+AgentStarts[🤖 AI Agent Starts Task] --> HumanCheck[🙋 User Checks Task];
+HumanCheck -- Approve --> AgentCompletes[✅ Task Approved & Completed];
+HumanCheck -- Request Changes --> AgentAdjusts[🔄 Agent Revises Task];
+AgentAdjusts --> HumanCheck;
 ```
 
-### 🔹 **How it Works**
-- The AI **writes a short poem**.  
-- A **human reads it** and decides to approve or request a revision.  
-- The AI **refines the poem** if needed.  
+---
 
-This method **prevents errors** and makes AI **more reliable**.
+## 📚 **Conclusion & Key Takeaways**
+
+- Trustworthy AI agents require **clear guidelines**, **robust security**, and **privacy protection**.
+- Systematic prompting frameworks help agents clearly understand their tasks.
+- Regular threat analysis and mitigation strategies protect systems.
+- Human-in-the-loop approaches ensure AI agents meet user expectations and remain secure.
 
 ---
 
-## 🔎 **Conclusion**
-To build **trustworthy AI agents**, we must:
-✅ Use **structured system messages** to keep AI on track.  
-✅ **Identify and stop threats** before they cause damage.  
-✅ Implement **security measures** like access control and validation.  
-✅ Keep **humans in the loop** for important decisions.  
+## 🌟 **Additional Resources**
 
-By following these steps, developers can create AI agents that are **safe, useful, and ethical**.  
-
----
-
-## 📚 **Further Reading**
-- [Responsible AI Overview](https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview)  
-- [Generative AI Model Evaluation](https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai)  
-- [AI Safety System Messages](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message)  
-- [AI Risk Assessment Template](https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf)  
+- [Responsible AI Overview](https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview)
+- [Evaluation of Generative AI](https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai)
+- [Safety System Messages](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext&tabs=top-techniques)
+- [Risk Assessment Template](https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us)

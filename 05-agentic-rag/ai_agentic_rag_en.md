@@ -1,130 +1,147 @@
-# 🤖 Agentic RAG
-
-## 📌 Introduction
-Agentic RAG (Agentic Retrieval-Augmented Generation) is an AI paradigm where **large language models (LLMs)** autonomously plan their next steps while retrieving information from external sources.  
-Unlike static **retrieval-then-read** patterns, Agentic RAG involves **iterative calls** to the LLM, integrating **tool use**, **function calls**, and **structured outputs**.  
-This allows the system to **refine queries, evaluate results, invoke additional tools, and iterate** until achieving an optimal answer.
-
-## 🎯 Learning Goals
-By the end of this lesson, you will understand:
-
-- **What is Agentic RAG?** – Learn how LLMs autonomously plan and retrieve information dynamically.
-- **Iterative Maker-Checker Loops** – Understand how LLMs refine queries, integrate tools, and evaluate outputs in cycles.
-- **Owning the Reasoning Process** – Explore how AI agents independently determine problem-solving steps.
-- **Agentic Workflow** – Study how an AI agent retrieves market trends, analyzes competitor data, and synthesizes insights.
-- **Handling Failure and Self-Correction** – Learn how AI models refine searches and correct errors dynamically.
-- **Use Cases & Value** – Identify areas where Agentic RAG is beneficial, such as compliance verification and database interactions.
-- **Governance & Trust** – Understand the role of explainability, bias control, and human oversight in AI systems.
+# 🧠 Agentic Retrieval-Augmented Generation (Agentic RAG) Explained Simply
 
 ---
 
-## 🔎 **What is Agentic RAG?**
-Agentic RAG is an AI system where LLMs:
-1. **Autonomously plan** next steps.
-2. **Retrieve external information** using APIs, databases, and vector search.
-3. **Refine queries iteratively** based on results.
-4. **Use tools and functions** to interact with structured and unstructured data.
+## 📌 **What is Agentic RAG?**
 
-```mermaid
-flowchart TD
-  A[User Query] --> B[Agentic RAG]
-  B -->|Retrieve Data| C[Query External Sources]
-  B -->|Use Tools| D[Execute SQL, API Calls]
-  B -->|Evaluate Results| E[Assess Data Quality]
-  E -->|Decide Next Step| F[Refine Query / Return Answer]
-```
+Agentic RAG is a method where AI agents autonomously plan their actions by continuously interacting with external information sources until a high-quality answer is achieved.
 
-| 🏗 **Feature**  | 📝 **Description** |
-|---------------|------------------|
-| **Iterative Querying** | Refines searches dynamically for improved accuracy. |
-| **Tool Integration** | Uses APIs, SQL, and vector search to retrieve data. |
-| **Self-Improvement** | Adjusts strategies based on data quality. |
+Unlike traditional methods that follow a fixed path, Agentic RAG:
+- 🔄 Continuously adjusts its strategy
+- 🔎 Retrieves relevant external information dynamically
+- ⚙️ Iteratively refines answers until satisfied
 
 ---
 
-## 🔄 **Agentic RAG Workflow**
-### 1️⃣ **Query Execution** – AI agent interprets the request.
-### 2️⃣ **Data Retrieval** – Searches databases, APIs, or external sources.
-### 3️⃣ **Evaluation & Refinement** – Assesses retrieved data; refines search if needed.
-### 4️⃣ **Final Answer Generation** – Compiles insights into a structured response.
+## 🎯 **Why Agentic RAG is Important**
 
+| Importance | Explanation | Example |
+|---|---|---|
+| 🎯 **Accuracy** | Iteratively refines answers to increase correctness | Verifying legal information multiple times |
+| 🔄 **Adaptability** | Can adjust strategy mid-task | Adjust queries when initial data is insufficient |
+| ⚙️ **Autonomy** | Decides its own reasoning steps | Chooses best retrieval methods automatically |
+| 📚 **Robustness** | Handles complex tasks gracefully | Combines multiple tools to provide comprehensive answers |
+
+---
+
+## 📌 **How Agentic RAG Works (Workflow)**
+
+Agentic RAG follows a looped iterative workflow:
+
+1. **Initial Query:** User asks a question or sets a goal.
+2. **Information Retrieval:** Agent identifies gaps and chooses tools to fetch more information.
+3. **Evaluation & Refinement:** Agent evaluates retrieved data and refines the query if needed.
+4. **Iterative Process:** Repeats steps 2-3 until achieving a satisfactory answer.
+5. **Final Response:** Presents a well-supported, accurate answer.
+
+### 📌 **Visual Example of Workflow:**
 ```mermaid
-sequenceDiagram
-  participant User
-  participant AI_Agent
-  participant External_API
-  User->>AI_Agent: Submit Query
-  AI_Agent->>External_API: Retrieve Data
-  External_API->>AI_Agent: Return Results
-  AI_Agent->>AI_Agent: Analyze & Refine
-  AI_Agent->>User: Provide Final Answer
+graph TD;
+UserQuery[🗣️ User Query] --> InitialAnalysis[🤖 Initial Analysis by LLM];
+InitialAnalysis --> RetrieveInfo[🔍 Retrieve Information];
+RetrieveInfo --> Evaluate[📊 Evaluate Information];
+Evaluate --> Decision{✅ Enough info?};
+Decision -- Yes --> FinalAnswer[📌 Deliver Final Answer];
+Decision -- No --> RefineQuery[🔄 Refine Query];
+Decision -- No --> RetrieveInfo;
 ```
 
 ---
 
-## 🛠 **Tools & Memory in Agentic RAG**
-### 📚 **Data Sources**
-| 🔍 **Retrieval Method** | 📌 **Description** |
-|-----------------|------------------|
-| **Vector Search** | Finds relevant text from PDFs, articles, or transcripts. |
-| **SQL Queries** | Fetches structured business and financial data. |
-| **API Calls** | Accesses real-time data like stock prices and news. |
+## 🛠️ **Key Tools Used in Agentic RAG**
 
+Agentic RAG integrates various tools:
+
+| Tool Type | Usage | Example |
+|-----------|-------|---------|
+| 🌐 **Vector Search** | Finding relevant documents | Azure AI Search |
+| 🗃️ **SQL Database** | Analyzing structured data | Azure SQL Database |
+| 📡 **APIs** | Accessing real-time information | Custom APIs or external services |
+| 🤖 **Language Models** | Synthesizing and summarizing findings | Azure OpenAI Service |
+
+---
+
+## ⚙️ **Agentic RAG’s Self-Correction Mechanisms**
+
+Agentic systems dynamically correct and learn from errors:
+
+| Mechanism | Explanation | Example |
+|-----------|-------------|---------|
+| 🔄 **Iterate & Re-query** | Retry with different approaches if initial attempt fails | Rewriting a faulty database query |
+| 🛠️ **Diagnostic Tools** | Identify and fix problems dynamically | Debugging queries with specialized tools |
+| 🙋 **Human Oversight** | Human intervention when AI reaches limitations | Humans approve complex decisions |
+
+### 📌 **Visual Example of Self-Correction:**
 ```mermaid
-graph TD
-  A[Agentic RAG] -->|Query Vector Data| B[Azure AI Search]
-  A -->|Query SQL| C[SQL Database]
-  A -->|Fetch API Data| D[External API]
+graph LR;
+InitialAttempt[🤖 Initial Attempt] --> Failure[⚠️ Failed Attempt];
+FailureDetection --> Reattempt[🔄 Retry with New Method];
+ReQuery[🔎 New Information Retrieval] --> Evaluation[📊 Re-evaluate];
+Evaluation --> FinalAnswer[✅ Accurate Response];
+Evaluation -- Needs Adjustment --> HumanReview[🙋 Human Intervention];
+HumanReview --> Evaluation;
 ```
 
 ---
 
-## 🔧 **Handling Errors & Self-Correction**
-When queries fail, the system:
-1. **🔄 Retries with Improved Queries**
-2. **🔍 Uses Debugging Tools**
-3. **👤 Requests Human Oversight for Critical Tasks**
+## 🚧 **Boundaries of Agentic RAG**
 
+Agentic RAG has clear limitations:
+
+| Limitations | Explanation | Example |
+|-------------|-------------|---------|
+| 🎯 **Domain-specific** | Best within known data and contexts | Specialized medical or legal domains |
+| 🖥️ **Infrastructure Dependent** | Requires robust backend infrastructure | Needs reliable databases and APIs |
+| 🔒 **Respect Guardrails** | Must respect predefined ethical and practical boundaries | Cannot autonomously expand beyond set tasks |
+
+---
+
+## 📚 **Practical Use Cases for Agentic RAG**
+
+Agentic RAG is effective in situations demanding precision and iterative refinement:
+
+| Scenario | Explanation | Example |
+|----------|-------------|---------|
+| ✅ **Correctness-critical** | Accurate and thorough data validation | Regulatory compliance checks |
+| 🗃️ **Complex Databases** | Queries requiring multiple refinements | Advanced financial data retrieval |
+| 🔄 **Extended Workflows** | Tasks evolving with new information | Ongoing market strategy updates |
+
+---
+
+## 🔍 **Transparency, Governance & Trust**
+
+Agentic RAG emphasizes responsible use through:
+
+| Principle | Importance | Example |
+|-----------|------------|---------|
+| 🧾 **Explainable Reasoning** | Transparent processes | Detailed logs of AI decision-making |
+| ⚖️ **Bias Control** | Fair and balanced data retrieval | Regular audits for biases |
+| 🙋 **Human Oversight** | Humans monitor sensitive decisions | Final approval by experts |
+
+### 📌 **Transparency Workflow Example:**
 ```mermaid
-flowchart TD
-  A[Agentic RAG] -->|Query Fails| B[Retry with Adjustments]
-  B -->|Improves Query| C[Use New Retrieval Method]
-  C -->|Fails Again| D[Request Human Review]
-  D -->|Human Feedback| E[System Improvement]
+graph LR;
+AgentDecision[🤖 Agent Decision] --> AuditTrail[🧾 Audit Trail Recorded];
+AuditTrail --> BiasCheck[⚖️ Bias & Fairness Check];
+BiasCheck --> HumanOversight[🙋 Human Approval];
+HumanOversight --> FinalApproval[✅ Final Approval Given];
 ```
 
 ---
 
-## ⚡ **Agentic RAG Use Cases**
-1️⃣ **Legal & Compliance Analysis** – Ensures fact-checking and policy compliance.  
-2️⃣ **Data-Intensive Research** – Automates queries for financial and market analysis.  
-3️⃣ **Enterprise Knowledge Management** – Retrieves internal reports and documents.  
+## 🌟 **Summary & Key Points**
 
-```mermaid
-graph TD
-  A[Agentic RAG Use Cases] --> B[Regulatory Compliance]
-  A --> C[Market Research]
-  A --> D[Enterprise AI Assistants]
-```
+- **Agentic RAG** continuously retrieves and refines information autonomously.
+- Its iterative nature ensures high accuracy and adaptability.
+- Integrates multiple tools for comprehensive problem-solving.
+- Robust self-correction ensures ongoing improvement and reliability.
+- Governed by strict ethical guidelines and transparency for trustworthiness.
 
 ---
 
-## 🔍 **Governance & Trust**
-AI agents must follow:
-- **📖 Explainable AI** – Maintain a record of queries and data sources.
-- **🛡 Bias & Fairness** – Ensure diverse, unbiased retrieval strategies.
-- **👥 Human Oversight** – Keep humans involved in critical decisions.
+## 📖 **Additional Resources**
 
-```mermaid
-graph TD
-  A[AI Agent] -->|Transparency| B[Query Logs]
-  A -->|Fairness| C[Bias Monitoring]
-  A -->|Human Supervision| D[Manual Review Process]
-```
-
----
-
-## 📚 **Further Reading**
-- [Agentic RAG Guide](https://ragaboutit.com)
-- [Azure AI RAG Tutorial](https://learn.microsoft.com/training/modules/use-own-data-azure-openai)
-- [Building Agentic AI Systems](https://www.youtube.com/watch?v=AOSjiXP1jmQ)
+- [Microsoft Learn - RAG with Azure](https://learn.microsoft.com/training/modules/use-own-data-azure-openai)
+- [What is Agentic RAG? (Weaviate)](https://weaviate.io/blog/what-is-agentic-rag)
+- [Agentic RAG: Complete Guide](https://ragaboutit.com/agentic-rag-a-complete-guide-to-agent-based-retrieval-augmented-generation/)
+- [Agentic RAG on Hugging Face](https://huggingface.co/learn/cookbook/agent_rag)
