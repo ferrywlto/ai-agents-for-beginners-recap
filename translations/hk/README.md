@@ -72,7 +72,7 @@
 |------------------------------------|--------------------------------------------|--------------------|
 | 🤖 智能代理介紹及應用場景              | [Intro to AI Agents and Use Cases](./01-intro-to-ai-agents/README.md)          | Learn More         |
 | 🛠️ 探索智能代理框架                   | [Exploring Agentic Frameworks](./02-explore-agentic-frameworks/README.md)  | Learn More         |
-| 🧩 理解智能代理設計原則                | [Understanding Agentic Design Patterns](./03-agentic-design-patterns/README.md)  | Learn More         |
+| 🧩 理解智能代理設計原則                | [Understanding Agentic Design Patterns](./03-agentic-design-principles/README.md)  | Learn More         |
 | 🛠️ 工具使用設計模式                   | [Tool Use Design Pattern](./04-tool-use/README.md)                    | Learn More         |
 | 🧠 Agentic RAG（智能代理檢索增強生成） | [Agentic RAG](./05-agentic-rag/README.md)                 | Learn More         |
 | 🛡️ 建立值得信賴嘅智能代理              | [Building Trustworthy AI Agents](./06-building-trustworthy-agents/README.md) | Learn More         |

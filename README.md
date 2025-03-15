@@ -78,7 +78,7 @@ If you get stuck or have any questions about building AI Agents, join our [Azure
 |--------------------------------------------|--------------------------------------------|
 | 🤖 Intro to AI Agents & Use Cases           | [Link](./01-intro-to-ai-agents/README.md)          |
 | 🤖 Exploring AI Agent Frameworks            | [Link](./02-explore-agentic-frameworks/README.md)  |
-| 🧩 Understanding Agentic Design Principles  | [Link](./03-agentic-design-patterns/README.md)  |
+| 🧩 Understanding Agentic Design Principles  | [Link](./03-agentic-design-principles/README.md)  |
 | 🛠️ AI Agent Tool Use Design Pattern         | [Link](./04-tool-use/README.md)                    |
 | 🧠 Agentic RAG                              | [Link](./05-agentic-rag/README.md)                 |
 | 🛡️ Building Trustworthy AI Agents           | [Link](./06-building-trustworthy-agents/README.md) |
