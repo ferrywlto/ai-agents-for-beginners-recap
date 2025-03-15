@@ -68,18 +68,18 @@
 
 ## 🗃️ 課堂內容
 
-| **課堂**                              | **連結**                                   | **額外學習**       |
-|----------------------------------------|--------------------------------------------|--------------------|
-| 🤖 智能代理介紹及應用場景               | [Intro to AI Agents and Use Cases](./01-intro-to-ai-agents/README.md)          | Learn More         |
-| 🛠️ 探索智能代理框架                     | [Exploring Agentic Frameworks](./02-explore-agentic-frameworks/README.md)  | Learn More         |
-| 🧩 理解智能代理設計模式                | [Understanding Agentic Design Patterns](./03-agentic-design-patterns/README.md)  | Learn More         |
-| 🛠️ 工具使用設計模式                    | [Tool Use Design Pattern](./04-tool-use/README.md)                    | Learn More         |
-| 🧠 Agentic RAG（智能代理檢索增強生成）                          | [Agentic RAG](./05-agentic-rag/README.md)                 | Learn More         |
-| 🛡️ 建立值得信賴嘅智能代理               | [Building Trustworthy AI Agents](./06-building-trustworthy-agents/README.md) | Learn More         |
-| 📅 智能代理規劃設計模式                         | [Planning Design Pattern](./07-planning-design/README.md)             | Learn More         |
-| 🤝 多智能代理設計模式                    | [Muilt-Agent Design Pattern](./08-multi-agent/README.md)                 | Learn More         |
-| 🧠 元認知設計模式           | [Metacognition Design Pattern](./09-metacognition/README.md)               | 了解更多         |
-| 🚀 AI 智能代理生產部署指南         | [AI Agents in Production](./10-ai-agents-production/README.md)        | 了解更多         |
+| **課堂**                            | **連結**                                   | **額外學習**       |
+|------------------------------------|--------------------------------------------|--------------------|
+| 🤖 智能代理介紹及應用場景              | [Intro to AI Agents and Use Cases](./01-intro-to-ai-agents/README.md)          | Learn More         |
+| 🛠️ 探索智能代理框架                   | [Exploring Agentic Frameworks](./02-explore-agentic-frameworks/README.md)  | Learn More         |
+| 🧩 理解智能代理設計原則                | [Understanding Agentic Design Patterns](./03-agentic-design-patterns/README.md)  | Learn More         |
+| 🛠️ 工具使用設計模式                   | [Tool Use Design Pattern](./04-tool-use/README.md)                    | Learn More         |
+| 🧠 Agentic RAG（智能代理檢索增強生成） | [Agentic RAG](./05-agentic-rag/README.md)                 | Learn More         |
+| 🛡️ 建立值得信賴嘅智能代理              | [Building Trustworthy AI Agents](./06-building-trustworthy-agents/README.md) | Learn More         |
+| 📅 智能代理規劃設計                   | [Planning Design](./07-planning-design/README.md)             | Learn More         |
+| 🤝 多智能代理設計模式                 | [Muilt-Agent Design Pattern](./08-multi-agent/README.md)                 | Learn More         |
+| 🧠 元認知設計模式                     | [Metacognition Design Pattern](./09-metacognition/README.md)               | 了解更多         |
+| 🚀 智能代理生產部署指南                | [AI Agents in Production](./10-ai-agents-production/README.md)        | 了解更多         |
 
 ## 🎒 其他課程
 

@@ -1,91 +1,137 @@
-# AI Agentic Design Principles
+# 🧩 Understanding Agentic Design Principles Explained Simply
 
-## Introduction
+---
 
-There are many ways to think about building AI Agentic Systems. Given that ambiguity is a feature and not a bug in Generative AI design, it’s sometimes difficult for engineers to figure out where to even start. We have created a set of human-centric UX Design Principles to enable developers to build customer-centric agentic systems to solve their business needs. These design principles are not a prescriptive architecture but rather a starting point for teams who are defining and building out agent experiences.
+## 📌 **What are AI Agentic Design Principles?**
 
-In general, agents should:
+These principles guide the design of AI agents to support, enhance, and empower human interactions while handling tasks that involve complexity, ambiguity, and ongoing interactions.
 
-- Broaden and scale human capacities (brainstorming, problem-solving, automation, etc.)
-- Fill in knowledge gaps (get me up-to-speed on knowledge domains, translation, etc.)
-- Facilitate and support collaboration in the ways we as individuals prefer to work with others
-- Make us better versions of ourselves (e.g., life coach/task master, helping us learn emotional regulation and mindfulness skills, building resilience, etc.)
+Agents should:
+- 🔍 Extend human abilities (e.g., automate tasks, solve problems)
+- 📚 Fill knowledge gaps (translations, providing quick summaries)
+- 🤝 Support collaborative interactions effectively
+- 🌟 Enhance personal capabilities (making people better at tasks)
 
-## This Lesson Will Cover
+---
 
-- What are the Agentic Design Principles
-- What are some guidelines to follow while implementing these design principles
-- What are some examples of using the design principles
+## 🎯 **Why AI Agentic Design Matters**
 
-## Learning Goals
+| Benefit | Explanation | Example |
+|---------|-------------|---------|
+| 🚀 **Scaling Human Abilities** | Agents extend human capabilities | Automating repetitive tasks |
+| 📖 **Knowledge Support** | Quickly fill gaps in human knowledge | Translating documents instantly |
+| 🤝 **Collaboration** | Enhance teamwork and communication | Coordinating remote teams |
+| 🌟 **Personal Growth** | Help users improve themselves | Personalized productivity coaching |
 
-After completing this lesson, you will be able to:
+---
 
-1. Explain what the Agentic Design Principles are
-2. Explain the guidelines for using the Agentic Design Principles
-3. Understand how to build an agent using the Agentic Design Principles
+## 🌐 **Agent Design Principles Explained**
 
-## The Agentic Design Principles
+### 🛰️ **Agent (Environment Interaction)**
 
-![Agentic Design Principles](./images/agentic-design-principles.png)
+AI agents should be designed to fit naturally into daily interactions:
 
-### Agent (Space)
+- **Connecting, not replacing**: Agents connect knowledge, events, and people.
+- **Invisible but accessible**: Agents work quietly in the background, interacting only when necessary.
 
-This is the environment in which the agent operates. These principles inform how we design agents for engaging in physical and digital worlds.
+### 📌 **Agent Interaction Flow:**
+```mermaid
+graph LR;
+Agent[🤖 AI Agent] --> Invisible[🌫️ Works quietly in background];
+Invisible --> EventTrigger[📅 Relevant Event Occurs];
+Invisible --> Interaction[🗨️ Agent Nudges User];
+Interaction[🙋 User Responds] --> Agent;
+```
 
-- **Connecting, not collapsing** – help connect people to other people, events, and actionable knowledge to enable collaboration and connection.
-- Agents help connect events, knowledge, and people.
-- Agents bring people closer together. They are not designed to replace or belittle people.
-- **Easily accessible yet occasionally invisible** – agent largely operates in the background and only nudges us when it is relevant and appropriate.
-  - Agent is easily discoverable and accessible for authorized users on any device or platform.
-  - Agent supports multimodal inputs and outputs (sound, voice, text, etc.).
-  - Agent can seamlessly transition between foreground and background; between proactive and reactive, depending on its sensing of user needs.
-  - Agent may operate in invisible form, yet its background process path and collaboration with other Agents are transparent to and controllable by the user.
+---
 
-### Agent (Time)
+### 🕒 **Agents Across Time**
 
-This is how the agent operates over time. These principles inform how we design agents interacting across the past, present, and future.
+Agents operate considering past, present, and future contexts:
 
-- **Past**: Reflecting on history that includes both state and context.
-  - Agent provides more relevant results based on analysis of richer historical data beyond only the event, people, or states.
-  - Agent creates connections from past events and actively reflects on memory to engage with current situations.
-- **Now**: Nudging more than notifying.
-  - Agent embodies a comprehensive approach to interacting with people. When an event happens, the Agent goes beyond static notification or other static formality. Agent can simplify flows or dynamically generate cues to direct the user’s attention at the right moment.
-  - Agent delivers information based on contextual environment, social and cultural changes and tailored to user intent.
-  - Agent interaction can be gradual, evolving/growing in complexity to empower users over the long term.
-- **Future**: Adapting and evolving.
-  - Agent adapts to various devices, platforms, and modalities.
-  - Agent adapts to user behavior, accessibility needs, and is freely customizable.
-  - Agent is shaped by and evolves through continuous user interaction.
+| Time | Agent Role | Example |
+|------|------------|---------|
+| 🗓️ **Past** | Reflect and analyze history/context | Reviewing past meetings to prepare reports |
+| ⏰ **Present** | Provide relevant context-based notifications | Reminding you of urgent emails |
+| 🚀 **Future** | Adapt and evolve through interactions | Learning user preferences for future tasks |
 
-### Agent (Core)
+### 📌 **Visualizing Time Interaction:**
+```mermaid
+graph TD;
+Past[🗓️ Past Analysis] --> Present[⏰ Contextual Notifications];
+Present --> Future[🚀 Evolve and Adapt];
+Future --> User[🧑 User Feedback & Interaction];
+User --> Past;
+```
 
-These are the key elements in the core of an agent’s design.
+---
 
-- **Embrace uncertainty but establish trust**.
-  - A certain level of Agent uncertainty is expected. Uncertainty is a key element of agent design.
-  - Trust and transparency are foundational layers of Agent design.
-  - Humans are in control of when the Agent is on/off and Agent status is clearly visible at all times.
+## 🔑 **Core Elements of AI Agent Design**
 
-## The Guidelines to Implement These Principles
+| Element | Explanation | Example |
+|---------|-------------|---------|
+| 🌫️ **Embrace Uncertainty** | Some ambiguity is acceptable; it allows flexibility | Agent refines its actions based on new information |
+| 🔒 **Establish Trust** | Trust through transparency & clear operation | Explaining why an action was taken clearly |
 
-When you’re using the previous design principles, use the following guidelines:
+### 📌 **Trust & Uncertainty Management Flow:**
+```mermaid
+graph LR;
+TaskGiven[🗣️ Task Given] --> Agent[🤖 AI Agent];
+Agent --> Decision[⚠️ Agent Decision with uncertainty];
+Decision --> Explain[📝 Clearly explains reasoning];
+Explain --> Trust[🤝 Builds User Trust];
+Trust --> Feedback[🙋 User Feedback];
+Feedback --> Improve[🔄 Agent Improves];
+```
 
-1. **Transparency**: Inform the user that AI is involved, how it functions (including past actions), and how to give feedback and modify the system.
-2. **Control**: Enable the user to customize, specify preferences and personalize, and have control over the system and its attributes (including the ability to forget).
-3. **Consistency**: Aim for consistent, multi-modal experiences across devices and endpoints. Use familiar UI/UX elements where possible (e.g., microphone icon for voice interaction) and reduce the customer’s cognitive load as much as possible (e.g., aim for concise responses, visual aids, and ‘Learn More’ content).
+---
 
-## How To Design a Travel Agent using These Principles and Guidelines
+## ⚙️ **Guidelines for Building Trustworthy AI Agents**
 
-Imagine you are designing a Travel Agent, here is how you could think about using the Design Principles and Guidelines:
+To build trustworthy AI agents, follow these principles clearly:
 
-1. **Transparency** – Let the user know that the Travel Agent is an AI-enabled Agent. Provide some basic instructions on how to get started (e.g., a “Hello” message, sample prompts). Clearly document this on the product page. Show the list of prompts a user has asked in the past. Make it clear how to give feedback (thumbs up and down, Send Feedback button, etc.). Clearly articulate if the Agent has usage or topic restrictions.
-2. **Control** – Make sure it’s clear how the user can modify the Agent after it’s been created with things like the System Prompt. Enable the user to choose how verbose the Agent is, its writing style, and any caveats on what the Agent should not talk about. Allow the user to view and delete any associated files or data, prompts, and past conversations.
-3. **Consistency** – Make sure the icons for Share Prompt, add a file or photo and tag someone or something are standard and recognizable. Use the paperclip icon to indicate file upload/sharing with the Agent, and an image icon to indicate graphics upload.
+| Guideline | Explanation | Example (Travel Agent) |
+|-----------|-------------|-----------------------|
+| 🧾 **Transparency** | Clearly explain AI actions and how users can interact or give feedback | Agent clearly states it’s an AI and provides instructions |
+| 🎛️ **Control** | Users control personalization, preferences, and data management | Users control agent's verbosity and can delete conversations |
+| 🔄 **Consistency** | Provide a predictable, seamless experience across interactions and modes | Standard user experience in text, voice, or visual interactions |
 
-## Additional Resources
+---
 
-- <a href="https://openai.com" target="_blank">Practices for Governing Agentic AI Systems | OpenAI</a>
-- <a href="https://microsoft.com" target="_blank">The HAX Toolkit Project - Microsoft Research</a>
-- <a href="https://responsibleaitoolbox.ai" target="_blank">Responsible AI Toolbox</a>
+## 🗺️ **Example: Building an AI Travel Agent**
 
+Applying principles to create a user-friendly Travel AI Agent:
+
+| Principle | Application |
+|-----------|-------------|
+| 🧾 **Transparency** | Clearly state it’s an AI agent with easy-to-understand onboarding instructions |
+| 🎚️ **User Control** | Allow users to set agent’s style, interaction type, and delete data |
+| 🎯 **Consistency** | Standard icons for actions (📅 booking, ✈️ flights, 🏨 hotels) |
+
+### 📌 **Travel Agent Interaction Diagram:**
+```mermaid
+graph LR;
+Start[🙋 User Starts Interaction] --> Transparent[🧾 Transparent Explanation of AI Role];
+Transparent --> Control[🎚️ User Sets Preferences];
+Control --> AgentTasks[🤖 Agent Tasks];
+AgentTasks --> Results[📋 Provide Recommendations];
+Results --> UserFeedback[👍👎 User Feedback];
+UserFeedback --> Adjust[🔄 Adjust Preferences];
+Adjust --> Start;
+```
+
+---
+
+## 📚 **Summary & Key Points**
+
+- AI Agentic Design helps agents integrate naturally into daily tasks.
+- Embracing uncertainty improves flexibility but must maintain user trust.
+- Transparency, user control, and consistency are essential for building trusted AI agents.
+
+---
+
+## 🌟 **Additional Resources**
+
+- [OpenAI Practices for Governing AI Agents](https://openai.com)
+- [HAX Toolkit - Microsoft Research](https://microsoft.com)
+- [Responsible AI Toolbox](https://responsibleaitoolbox.ai)
