@@ -1,4 +1,17 @@
+# 免責聲明
 
+呢個係 Microsoft 嘅 [Microsoft’s AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners) 嘅 fork。
+
+每個章節嘅 README 係用 GPT-4.5 縮寫原內容生成嘅。
+
+呢個 fork 嘅目標係令學習內容對於我呢類視覺型學習者更容易理解：
+- 使用表格、重點列表同埋 emoji 簡化內容，因為原本嘅文字唔係太直觀。
+- 用 Mermaid 圖表解釋工作流程，而唔係用程式碼區塊，因為原內容嘅程式碼比較似偽代碼。
+- 包含咗廣東話翻譯，方便香港人 🇭🇰。如果需要，歡迎大家提供更多翻譯。
+
+呢個 fork 只用作個人學習用途，並無意取代原作。如果覺得幫到你學習，希望你可以標明出處，多謝支持！
+
+請參考官方 repository 獲取原始內容。
 
 # 初學者 AI Agents 課程
 

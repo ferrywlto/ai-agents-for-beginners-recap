@@ -9,7 +9,7 @@ The goal of this fork is to make the lessons easier to understand for visual lea
 	•	It uses Mermaid charts to explain workflows instead of code blocks, since the original code is more like pseudocode.
 	•	It also includes a Cantonese translation for Hongkongers 🇭🇰. Feel free to contribute translations as needed.
 
-This fork is for personal learning purposes only and is not intended to replace the original work. 
+This fork is for personal learning purposes only and is not intended to replace the original work. I would appreciate it if you could cite my work if you find it useful.
 
 Please refer to the official repository for the original content.
 
